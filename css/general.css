@@ -1,0 +1,35 @@
+body {
+  margin: 0 auto;
+}
+.shadow-box{
+  -webkit-box-shadow: 0 0 5px 2px #999;
+  -moz-box-shadow: 0 0 5px 2px #999;
+  box-shadow: 0 0 5px 2px #999;
+}
+.navbar{
+  height: 200px;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  box-sizing: border-box;
+}
+.list-cont {
+  margin: 0 auto;
+/*  border-left: solid 1px black;
+  border-right: solid 1px black;
+  border-bottom: solid 1px black;*/
+  overflow: auto;
+}
+.word {
+  margin-top: 10px;
+}
+.row:last-child {
+  margin-bottom: 8vh;
+}
+span {
+  font-size: .3em;
+  float: left;
+  width: 25px;
+  text-align: right;
+  margin: 5px 8px 0 0;
+  vertical-align: text-bottom;
+}
