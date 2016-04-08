@@ -1,24 +1,25 @@
 body {
   margin: 0 auto;
-  width: 60%; }
-
-.shadow-box {
+  width: 60%;
+}
+.shadow-box{
   -webkit-box-shadow: 0 0 5px 2px #999;
   -moz-box-shadow: 0 0 5px 2px #999;
-  box-shadow: 0 0 5px 2px #999; }
-
-.navbar {
+  box-shadow: 0 0 5px 2px #999;
+}
+.navbar{
   height: 160px;
   border-top: 1px solid #999;
   border-bottom: 1px solid #999;
   box-sizing: border-box;
-  position: relative; }
-  .navbar img {
+  position: relative;
+  img {
     position: absolute;
     width: 165px;
     right: 0;
-    margin: 25px 30px; }
-  .navbar #search-bar {
+    margin: 25px 30px;
+  }
+  #search-bar {
     position: absolute;
     bottom: 43px;
     left: 40px;
@@ -26,42 +27,49 @@ body {
     border: 0px;
     padding: 3px 10px 5px 10px;
     width: 300px;
-    font-size: 1em; }
-  .navbar #filters {
+    font-size: 1em;
+  }
+  #filters {
     position: absolute;
     bottom: 12px;
-    left: 40px; }
-  .navbar input, .navbar select, .navbar textarea {
+    left: 40px;
+  }
+  input, select, textarea{
     color: #c1c1c1;
-    outline: none; }
-  .navbar textarea:focus, .navbar input:focus {
+    outline: none;
+  }
+  textarea:focus, input:focus {
     color: black;
-    outline: none; }
-
+    outline: none;
+  }
+}
 .list-cont {
-  list-style: none;
+  list-style:none;
   margin: 0;
   padding: 20px 0 50px 0;
-  overflow: auto; }
-  .list-cont li {
+  overflow: auto;
+  li {
     margin: 10px 0 0 0;
     width: 25%;
     min-width: 200px;
-    float: left; }
-  .list-cont .end-cap {
+    float: left;
+  }
+
+  .end-cap {
     border-top: 1px solid #999;
-    box-shadow: 0 1px 1px #999; }
-  .list-cont span {
+    box-shadow: 0 1px 1px #999;
+  }
+  span {
     font-size: .3em;
     float: left;
     width: 38px;
     text-align: right;
     margin: 5px 8px 0 0;
-    vertical-align: text-bottom; }
-
+    vertical-align: text-bottom;
+  }
+}
 .footer {
   text-align: center;
   padding: 50px 0 20px 0;
-  font-size: .8em; }
-
-/*# sourceMappingURL=general.css.map */
+  font-size: .8em;
+}
