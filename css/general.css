@@ -1,6 +1,37 @@
 body {
   margin: 0 auto; }
 
+@media (max-width: 50em) {
+  body {
+    width: 100%; }
+
+  .navbar {
+    text-align: center;
+    text-align: center; }
+    .navbar img {
+      margin: 25px 0 0 0 !important;
+      position: relative !important;
+      width: 200px !important; }
+    .navbar #search-bar {
+      font-size: 2em !important;
+      width: calc(100% - 100px) !important;
+      margin: 20px 0 0 40px !important; }
+    .navbar #filters {
+      margin: 20px 0 30px 0 !important; }
+      .navbar #filters input {
+        font-size: .8em !important; }
+
+  .list-cont {
+    font-size: 1.8em !important;
+    padding: 80px 0 0 0 !important; }
+    .list-cont li {
+      min-width: 100% !important; }
+    .list-cont li:first-child {
+      padding-top: 50px !important; }
+    .list-cont li:last-child {
+      padding-bottom: 100px !important; }
+    .list-cont span {
+      width: 60px !important; } }
 @media (min-width: 50em) {
   body {
     width: 70%; } }
@@ -8,14 +39,16 @@ body {
   body {
     width: 60%; } }
 .shadow-box {
-  -webkit-box-shadow: 0 0 5px 2px #999;
-  -moz-box-shadow: 0 0 5px 2px #999;
-  box-shadow: 0 0 5px 2px #999; }
+  -webkit-box-shadow: 0 0 5px 2px #e0e0e0;
+  -moz-box-shadow: 0 0 5px 2px #e0e0e0;
+  box-shadow: 0 0 5px 2px #e0e0e0;
+  border-right: 1px solid #999; }
 
 .navbar {
   min-height: 160px;
   border-top: 1px solid #999;
   border-bottom: 1px solid #999;
+  border-left: 1px solid #999;
   position: relative;
   overflow: auto; }
   .navbar img {
@@ -35,7 +68,9 @@ body {
   .navbar #filters {
     float: left;
     display: block;
-    margin: 10px 0 13px 40px; }
+    margin: 2px 40px 13px 40px; }
+    .navbar #filters input {
+      margin: 8px 2px 0 0; }
   .navbar input, .navbar select, .navbar textarea {
     color: #c1c1c1;
     outline: none; }
@@ -43,26 +78,56 @@ body {
     color: black;
     outline: none; }
 
-.list-cont {
-  list-style: none;
-  margin: 0;
-  padding: 20px 0 50px 0;
-  overflow: auto; }
-  .list-cont li {
-    margin: 10px 0 0 0;
-    width: 25%;
-    min-width: 200px;
-    float: left; }
-  .list-cont .end-cap {
-    border-top: 1px solid #999;
-    box-shadow: 0 1px 1px #999; }
-  .list-cont span {
-    font-size: .3em;
-    float: left;
-    width: 38px;
-    text-align: right;
-    margin: 5px 8px 0 0;
-    vertical-align: text-bottom; }
+.ul-cont {
+  position: relative; }
+  .ul-cont .list-cont {
+    margin: 0;
+    padding: 80px 0 0 0;
+    overflow: hidden;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-between; }
+    .ul-cont .list-cont li {
+      width: 25%;
+      min-width: 200px;
+      text-align: left;
+      margin-top: -80px;
+      padding: 10px 0 80px 0;
+      border-left: solid 1px #999;
+      box-sizing: border-box; }
+    .ul-cont .list-cont li:last-child {
+      padding-bottom: 30px; }
+    .ul-cont .list-cont .end-cap {
+      border-top: 1px solid #999;
+      -webkit-box-shadow: 0 1px 1px #e0e0e0;
+      -moz-box-shadow: 0 1px 1px #e0e0e0;
+      box-shadow: 0 1px 1px #e0e0e0; }
+    .ul-cont .list-cont span {
+      font-size: .3em;
+      float: left;
+      width: 20px;
+      text-align: right;
+      margin: 5px 8px 0 0;
+      vertical-align: text-bottom; }
+  .ul-cont .li-cap {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    bottom: 0;
+    background: white;
+    border-top: solid #999 1px;
+    border-left: solid #999 1px;
+    border-bottom: solid #999 1px;
+    box-sizing: border-box; }
+    .ul-cont .li-cap::after {
+      content: "Busy Bee";
+      display: none; }
 
 .footer {
   text-align: center;
