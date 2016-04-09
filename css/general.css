@@ -135,7 +135,7 @@ body {
   position: absolute; }
 
 .word:hover .more-info {
-  animation: delay 15s;
+  animation: delay 1s;
   display: inline;
   padding: 30px 50px 30px 10px;
   box-sizing: border-box; }
@@ -149,13 +149,9 @@ body {
 @keyframes delay {
   0% {
     opacity: 0; }
-  5% {
+  50% {
     opacity: 0; }
-  10% {
-    opacity: 1; }
-  90% {
-    opacity: 1; }
   100% {
-    opacity: 0; } }
+    opacity: 1; } }
 
 /*# sourceMappingURL=general.css.map */
