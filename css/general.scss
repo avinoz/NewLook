@@ -167,7 +167,7 @@ body {margin: 0 auto;}
 
 .word:hover .more-info {
   // border: 1px solid red;
-  animation: delay 15s;
+  animation: delay 1s;
   display: inline;
   padding: 30px 50px 30px 10px;
   box-sizing: border-box;
@@ -183,10 +183,8 @@ body {margin: 0 auto;}
 
 @keyframes delay {
   0% {opacity: 0;}
-  5% {opacity: 0;}
-  10% {opacity: 1;}
-  90% {opacity: 1;}
-  100% {opacity: 0;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 
