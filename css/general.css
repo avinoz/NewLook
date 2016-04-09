@@ -22,22 +22,29 @@ body {
         font-size: .8em !important; }
 
   .list-cont {
-    font-size: 1.8em !important;
+    font-size: 1.5em !important;
     padding: 80px 0 0 0 !important; }
-    .list-cont li {
-      min-width: 100% !important; }
-    .list-cont li:first-child {
-      padding-top: 50px !important; }
-    .list-cont li:last-child {
-      padding-bottom: 100px !important; }
     .list-cont span {
-      width: 60px !important; } }
+      width: 60px !important; }
+
+  .more-info {
+    transform: scale(0.8);
+    width: 100px;
+    padding: 40px 0 0 0 !important;
+    left: 0px !important; } }
 @media (min-width: 50em) {
   body {
     width: 70%; } }
 @media (min-width: 75em) {
   body {
     width: 60%; } }
+a {
+  text-decoration: none;
+  color: blue;
+  transition: 0.2s ease all; }
+  a:hover {
+    color: purple; }
+
 .shadow-box {
   -webkit-box-shadow: 0 0 5px 2px #e0e0e0;
   -moz-box-shadow: 0 0 5px 2px #e0e0e0;
@@ -106,45 +113,46 @@ body {
       border-left: solid 1px #999;
       height: 20000px; }
   .ul-cont .word {
+    position: relative;
     color: blue;
     flex: 1 250px;
     padding: 5px 0; }
     .ul-cont .word:hover {
       background: rgba(255, 255, 0, 0.5);
       box-sizing: border-box; }
-  .ul-cont span {
-    font-size: .3em;
-    float: left;
-    width: 38px;
-    text-align: right;
-    margin: 5px 8px 0 0;
-    vertical-align: text-bottom; }
+    .ul-cont .word span {
+      font-size: .3em;
+      float: left;
+      width: 38px;
+      text-align: right;
+      margin: 5px 8px 0 0;
+      vertical-align: text-bottom; }
+  .ul-cont .more-info {
+    position: absolute;
+    left: 110px;
+    z-index: 2;
+    display: none;
+    width: 330px;
+    line-height: 15px;
+    position: absolute; }
+  .ul-cont .word:hover .more-info {
+    animation: delay 1s;
+    display: inline;
+    padding: 20px 0 0 30px;
+    box-sizing: border-box; }
+    .ul-cont .word:hover .more-info .actual-info {
+      color: #666;
+      font-size: .9em;
+      line-height: 1.3em;
+      background: white;
+      padding: 20px 30px;
+      box-sizing: border-box;
+      border: 1px solid #999; }
 
 .footer {
   text-align: center;
   padding: 30px 0 15px 0;
   font-size: .8em; }
-
-.more-info {
-  z-index: 2;
-  display: none;
-  margin-top: -30px;
-  margin-left: 50px;
-  width: 330px;
-  line-height: 15px;
-  position: absolute; }
-
-.word:hover .more-info {
-  animation: delay 1s;
-  display: inline;
-  padding: 30px 50px 30px 10px;
-  box-sizing: border-box; }
-  .word:hover .more-info .actual-info {
-    font-size: .8em;
-    background: white;
-    padding: 20px 30px;
-    box-sizing: border-box;
-    border: 1px solid #999; }
 
 @keyframes delay {
   0% {
