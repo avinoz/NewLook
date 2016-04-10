@@ -66,8 +66,7 @@
     $(".list-cont").append(
         "<div class='word'><span>" + num++ + "</span>" + beautiful[i] +
         "<div class='more-info'><div class= 'actual-info'>" + moreInfo +
-        "</div>" +
-        "</div></div>"
+        "</div></div></div>"
     )};
 
     // DEFINES NUMBER OF HIGHLIGHTED WORDS
@@ -75,6 +74,14 @@
 
     // REMOVES BORDER FOR LEFT ROW
     $(".margin").first().css("border-left", "0");
+
+    // RETURNS CLICKED WORD
+    $(".word").click(function(){
+        var one = $(this).html()
+        var two = $(one).find("span").prevObject[1].data
+        var link = "http://onelook.com/thesaurus/?s=" + two
+        window.location.href = link;
+    });
 
 </script>
 </body>
