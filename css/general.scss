@@ -117,6 +117,9 @@ a {
     .division-cont {
       padding: 0;
       display: flex;
+      min-width: 15em;
+       -webkit-flex: 1 1 15em; /* this */
+       flex: 1;
       flex-flow: row wrap;
       justify-content: space-between;
     }
@@ -192,3 +195,23 @@ a {
 
 
 
+<<<<<<< HEAD
+
+
+
+
+.item {
+  border: solid 1px #fff;
+  background-color: #09e;
+  box-sizing: border-box;
+  color: #fff;
+  padding: 8px;
+}
+
+[flex].item {
+  -webkit-flex: 1 1 318px;
+  flex: 1 1 318px;
+}
+
+=======
+>>>>>>> master
