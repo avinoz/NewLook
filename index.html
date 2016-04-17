@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <title>OneLook Thesaurus</title>
     <link rel="stylesheet" href="./css/general.css">
-    <link rel="stylesheet" href="./css/avinozgrid.css">
     <link rel="shortcut icon" href="./assets/avio.ico" type="image/x-icon" />
 
     <script src="js/jquery-2.2.2.min.js"></script>
 </head>
 <body>
+<<<<<<< HEAD
     <div class="shadow-box debug">
         <div class="navbar">
             <img src="./assets/logo.png">
@@ -36,42 +36,82 @@
 <!--   <div flex class="item">Item A</div>
   <div flex class="item">Item B</div>
   <div flex class="item">Item C</div> -->
+=======
+>>>>>>> master
 
-
-        <div class="end-cap"></div>
+    <div class="shadow-box">
+    <div class="navbar">
+        <img src="./assets/logo.png">
+        <form>
+            <input id="search-bar" type="search" name="searchTerm" placeholder="Search">
+        </form>
+        <form id="filters">
+            <input type="search" name="filters" placeholder="Starts with...">
+            <input type="search" name="filters" placeholder="Number of letters..">
+            <input type="search" name="filters" placeholder="Also related to...">
+            <input type="search" name="filters" placeholder="Rhymes with...">
+            <input type="search" name="filters" placeholder="Sounds like...">
+            <input type="search" name="filters" placeholder="Number of syllables...">
+        </form>
     </div>
-    <div class="footer">© Datamuse 2016</div>
+
+    <div class="ul-cont">
+        <div class="list-cont"></div>
+        <div class="divisions">
+            <div class="division-cont">
+                <div class="margin"></div>
+                <div class="margin"></div>
+                <div class="margin"></div>
+                <div class="margin"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
 <script type="text/javascript">
 
+    // SAMPLE RETURN OF WORDS
     var beautiful = ['gorgeous', 'lovely','ravishing', 'exquisite', 'splendid', 'glorious', 'pleasant', 'beauteous', 'scenic', 'stunning', 'pretty', 'picturesque', 'aesthetic', 'aesthetical', 'better-looking', 'beeferman','bonnie', 'bonny', 'comely', 'dishy', 'esthetic', 'esthetical', 'fair', 'fine', 'fine-looking', 'good-looking', 'handsome', 'pretty-pretty', 'pulchritudinous', 'resplendent', 'sightly', 'splendiferous', 'well-favored', 'well-favoured', 'wonderful', 'fabulous', 'prettiest', 'magnificent', 'enchanting', 'delightful', 'lush', 'elegant', 'luscious', 'charming', 'majestic', 'marvelous', 'serene', 'captivating', 'sensuous', 'nicest', 'mesmerizing', 'amazing', 'graceful', 'breathtaking', 'classy', 'wondrous', 'verdant', 'alluring', 'pristine', 'tranquil', 'fantastic', 'evocative', 'beguiling', 'sweetest', 'dreamy', 'awesome', 'idyllic', 'delectable', 'picture postcard', 'sumptuous', 'homely', 'tasteful', 'gemlike', 'vibrant', 'unspoiled', 'glamorous', 'spectacular', 'sensual', 'unforgettable', 'stylish', 'cute', 'delicious', 'photogenic', 'neat', 'dazzling', 'rustic', 'joyful', 'immaculate', 'fascinating', 'sparkling', 'luxuriant', 'magical', 'ethereal', 'vivacious', 'colorful', 'adorable', 'luxurious', 'paradisiacal', 'sunshiny', 'blessed', 'sexy', 'perfect', 'radiant', 'unspoilt', 'swanlike', 'unbeautiful', 'sultry', 'pleasanter', 'loving', 'seductive', 'unposed', 'overdecorated', 'sunny', 'splendorous', 'fantabulous', 'unpretty', 'luminous', 'treasured', 'timeless', 'lustrous', 'scrumptious', 'dusky', 'succulent', 'starlit', 'loverly', 'ugly', 'stately', 'eternally', 'truly', 'strangely', 'woman', 'girl', 'women', 'eyes', 'face', 'lady', 'wife', 'city', 'country', 'house', 'flowers', 'daughter', 'hair', 'girls', 'home', 'garden', 'scenery', 'sight', 'music', 'morning', 'valley', 'creature', 'gardens', 'building', 'piece', 'trees', 'maiden', 'smile', 'princess', 'spot', 'dress', 'lake', 'clothes', 'pictures', 'tree', 'island', 'flower', 'poem', 'landscape', 'song', 'baby', 'dream', 'bird', 'park', 'beaches', 'colors', 'weather', 'bride', 'evening', 'ladies', 'river', 'surroundings', 'soul', 'horse', 'daughters', 'countryside', 'homes', 'birds', 'beach', 'songs', 'mountains', 'creatures', 'paintings', 'youth', 'poems', 'afternoon', 'sister', 'horses', 'sunset', 'queen', 'painting', 'temple', 'palace', 'bay', 'colour', 'lakes', 'statue', 'maidens', 'hills', 'illustrations', 'gown', 'photographs', 'blonde', 'landscapes', 'dresses', 'furniture', 'sights', 'roses', 'colours', 'mansion', 'actress', 'campus', 'specimen', 'melody', 'butterfly', 'breasts', 'parks', 'blue', 'angel', 'simplicity', 'friendship', 'widow', 'handwriting', 'valleys', 'apartment', 'chapel', 'everything', 'mountain', 'hotel', 'drawings', 'doll', 'woods', 'grove', 'verses', 'wedding', 'manners', 'feathers', 'temples', 'singing', 'portrait', 'goddess', 'garments', 'castle', 'meadow', 'cat', 'bouquet', 'cathedral', 'hymn', 'prose', 'villa', 'countenance', 'necklace', 'dancer', 'melodies', 'statues', 'ornaments', 'monument', 'blossoms', 'planet', 'mistress', 'foliage', 'sisters', 'costumes', 'damsel', 'complexion', 'plumage', 'lawn', 'stretch', 'creations', 'spectacle', 'mare', 'carvings', 'stranger', 'rainbow', 'fountain', 'virgin', 'gowns', 'vase', 'palaces', 'robe', 'inside', 'waterfall', 'harbor', 'fabrics', 'carpet', 'sculpture', 'sculptures', 'heroine', 'hymns', 'singer', 'rugs', 'sunsets', 'jewels', 'jewelry', 'edifice', 'cemetery', 'tribute', 'maid', 'pottery', 'meadows', 'marble', 'cake', 'sunrise', 'butterflies', 'robes', 'brunette', 'vistas', 'sunshine', 'workmanship', 'tonight', 'carpets', 'ornament', 'decorations', 'mosque', 'groves', 'princesses', 'looked', 'look', 'looks', 'carving', 'touching', 'shining', 'imposing', 'murmured', 'beholds', 'poised', 'beheld', 'haunting', 'blooming', 'adorned', 'wert', 'prepares', 'terrifying', 'appreciating', 'tanned', 'proportioned', 'contemplating', 'contemplate', 'spirited', 'glimmers', 'yearns', 'estimating', 'mate', 'procreate', 'sublime', 'movement', 'damned', 'america', 'good', 'people', 'gate', 'body', 'mind', 'true', 'losers', 'most', 'artist', 'laundrette', 'names', 'the', 'dreamer', 'bad', 'relevance', 'things', 'bold', 'sea', 'analytic', 'joe', 'something', 'essays', 'magazine', 'ones', 'danube', 'australian', 'boy', 'trans', 'pass', 'fass', 'bright', 'thing', 'musically', 'necessity', 'nymph', 'spring', 'lily', 'revisited', 'isle', 'made', 'small', 'ohio', 'too', 'moon', 'star', 'novel', 'all', 'paradise', 'one', 'indonesia', 'balder', 'hippie', 'melusine', 'harper', 'helen', 'young', 'noble', 'elena', 'snow', 'souls', 'cook', 'launderette', 'witch', 'savior', 'contest', 'imperialist', 'swimmers', 'fitzgerald', 'magazines', 'schumacher', 'soup', 'award', 'dangerous', 'large', 'contemplation', 'burke', 'beings', 'blond', 'are', 'sara', 'merchandise', 'strange', 'ideals', 'ideal', 'useful', 'whitman', 'abacus', 'lies', 'baldur', 'colored', 'dian', 'screaming', 'planners', 'whose', 'beast', 'and', 'feast', 'healthful', 'ungka', 'nonsense', 'galatea', 'zion', 'bronx', 'advocates', 'carson', 'encounters', 'jade', 'workout', 'beard', 'acre', 'pageant', 'proponents', 'waukesha', 'interpreter', 'critic', 'itself', 'lie', 'nelly', 'legend', 'fast', 'brave', 'make', 'pearl', 'greed', 'devil', 'myself', 'rare', 'nutting', 'quadroon', 'yelena', 'gatsby', 'madonnas', 'planner', 'beasts', 'aesthetics', 'not', 'frazer', 'resulting', 'boulton', 'hipple', 'loot', 'duchess', 'brute', 'endless', 'skies', 'digest', 'balkis', 'loser', 'vermont', 'burbank', 'aquarium', 'can', 'was', 'clad', 'indeed', 'enough', 'really', 'always', 'more', 'intelligent', 'talented', 'how', 'smart', 'wild', 'rich', 'deadly', 'brilliant', 'terrible', 'sad', 'dear', 'exceedingly', 'said', 'feeling', 'keep', 'whispered', 'agreed', 'replied', 'sang', 'sing', 'breathed', 'exclaimed', 'informs', 'behold', 'exclaim', 'sighed', 'muttered', 'featured', 'commented', 'houri', 'peri', 'beautify', 'beauty', 'belle', 'bella', 'embellish', 'calligraphy', 'eyeful', 'narcissus', 'adonis', 'beautifully', 'esther', 'kalopsia', 'orchidaceous', 'psyche', 'ugly duckling', 'adorn', 'art', 'attractive', 'callipygian', 'cherub', 'decor', 'divine', 'egret', 'ewer', 'exotic', 'flamingo', 'ganymede', 'gem', 'gild', 'gold', 'grace', 'kaleidoscope', 'less', 'luna', 'nice', 'orchid', 'picture', 'statuesque', 'swan', 'sweet', 'unhandsome', 'venust', 'a la belle toile', 'admiration', 'aestheticism', 'ailantus', 'allah', 'alstroemeria', 'amaranthine', 'amboyna wood', 'ambrosial', 'ammobium alatum', 'ancient', 'anemone', 'anthological', 'anthology', 'antique', 'aphrodite', 'appreciative', 'arbor dianae', 'ariadne', 'ariel gazelle', 'array', 'artistic creation', 'artistic production', 'artistry', 'asset', 'attract', 'attractively', 'balance', 'balsam', 'bargain', 'bead fern', 'beautied', 'beautification', 'beautifier', 'beautifull', 'beautifulness', 'beauty contest', 'better', 'bewitchingly', 'big', 'bird of paradise', 'blackburnian warbler', 'bleeding', 'blok', 'boletus pulcherrimus', 'bonnilass', 'book of esther', 'burly', 'cagit', 'caligynephobia', 'call', 'calli-', 'calligyniaphobia', 'calliope', 'callipygous', 'callistephus chinensis', 'callomania', 'calypso', 'capped', 'capri', 'carborundum', 'carbuncle', 'carmine', 'carnation', 'cassius', 'cast', 'cattleya', 'china aster', 'chlorophane', 'cleopatra', 'clethra alnifolia', 'cliff penstemon', 'cocobolas', 'common grape hyacinth', 'complement', 'corner', 'corydalis', 'culebra', 'daffodil', 'daintiness', 'dainty', 'day', 'debuscope', 'deck', 'decorate', 'deirdre', 'delicacy', 'delight', 'demoiselle', 'devastating', 'devotion', 'diamond', 'diospyros', 'disa', 'disciplined', 'disfigure', 'dolly varden', 'dreamily', 'drink', 'dryandra', 'duchesse lace', 'dulcet', 'eden', 'elite', 'enamel', 'endow', 'endymion', 'enrich', 'equally', 'erica', 'eschscholtzia', 'esthetics', 'eucharis', 'euonym', 'excellent', 'eye', 'fabric', 'favorable', 'fedora', 'fineness', 'fluorene', 'fluorite', 'forget-me-not', 'furze', 'galadriel', 'galaxy', 'garden of eden', 'gardenia', 'genus anemone', 'genus cattleya', 'genus diospyros', 'gild the lily', 'glamorisation', 'glamorization', 'glamourisation', 'glamourization', 'golden pholiota', 'goldfinch', 'gorgeously', 'graced', 'gracefulness', 'great', 'guereza', 'halle', 'handsomest', 'heaven', 'heavenly', 'helen of troy', 'hemerocallis', 'hoenir', 'holy', 'homeliness', 'homograph', 'honesty', 'hoopoo', 'horror', 'houtou', 'hyacinth', 'hydria', 'impatiens', 'indescribably', 'interlude', 'jacaranda', 'japonica', 'jennifer connelly', 'jesus', 'kalokagathia', 'kama', 'knocker', 'labradorite', 'letterwood', 'leucothoe', 'liriodendron', 'little', 'long', 'lovelier', 'loveliest', 'lulu', 'lumachella', 'lusty', 'magnificently', 'maia', 'medinilla magnifica', 'mold', 'monarch', 'morinda', 'mrs', 'muscari comosum', 'muscari neglectum', 'nero-antico', 'nonesuch', 'now and then', 'obscure', 'oleander', 'ono', 'onoclea sensibilis', 'oo', 'orchidaceous plant', 'ornate', 'outshine', 'page', 'pageism', 'paint the lily', 'pandora', 'patina', 'pattern', 'paul', 'pear', 'penmanship', 'penstemon rupicola', 'pepper bush', 'personal', 'philocalist', 'phoenix', 'pholiota aurea', 'plain', 'plainness', 'porphyry', 'portland', 'positive', 'preternaturally', 'prettier', 'prettify', 'pride', 'proustite', 'puff-leg', 'pulchritude', 'quaint', 'rape', 'ravishingly', 'reface', 'resplendently', 'rewa-rewa', 'riflebird', 'rio', 'roberto benigni', 'rock penstemon', 'romeo', 'rosary', 'rose-colored', 'rosella', 'rubricate', 'rupicola', 'sanity', 'scat', 'sea-green', 'sea peach', 'sensitive fern', 'sheen', 'showplace', 'simply', 'slit-shell', 'slur', 'solitaire', 'speciosity', 'splendidly', 'spray', 'stain', 'starlet', 'subtly', 'summer sweet', 'surpassingly', 'sweet pepperbush', 'symmetry', 'taj mahal', 'talipot', 'tassel hyacinth', 'taste', 'tempean', 'thionoline', 'thorntail', 'thyine wood', 'titi', 'titi monkey', 'today', 'transfigure', 'treasure', 'trogon', 'trojan war', 'tuberose', 'tulip', 'tulipwood', 'turreae', 'ugliest', 'unattractive', 'undoubtedly', 'unlovely', 'unselfconsciously', 'urrhodin', 'ursula', 'use', 'valkyria', 'valkyrie', 'veneer', 'venus', 'venustaphobia', 'venustraphobia', 'vermeil', 'view', 'virtu', 'vision', 'water lily', 'where', 'white alder', 'windflower', 'winged everlasting', 'wistfully', 'wonder', 'wood thrush', 'xanadu', 'yesterday', 'zebrawood']
 
-    var moreInfo = "adjective 1. having beauty; possessing qualities that give great pleasure or satisfaction to see, hear, think about, etc."
 
+    // FLEXBOX HELPER
+    $(window).on("load resize scroll",function() {
+        var num = $(".word").first().width();
+        $(".word").slice(-4).css("max-width", num);
+        $(".word").last().css("border-left", "0px");
+    });
+
+    // SAMPLE OF TOOLTIPS MODAL
+    var moreInfo = "adjective 1. having beauty; possessing qualities that give great pleasure or satisfaction to" +
+        "<a href='http://avinoz.com'> see,</a>" +
+        "<a href='http://avinoz.com'> hear,</a>" +
+        "<a href='http://avinoz.com'> think,</a>" +
+        "<a href='http://avinoz.com'> about</a>," +
+        " etc."
+
+    // CREATES LIST OF WORDS
     var num = 1
     for (i = 0; i < beautiful.length; i++) {
     $(".list-cont").append(
-        "<li><div class='word'><span>" + num++ + "</span>" +
-        "<div class='tooltip'><div><div>" + beautiful[i] +
-        "</div><div class='more-info'><div class= 'actual-info'>" + moreInfo +
-        "</div></div></div></div></div></li>"
+        "<div class='word'><span>" + num++ + "</span>" + beautiful[i] +
+        "<div class='more-info'><div class= 'actual-info'>" + moreInfo +
+        "</div></div></div>"
     )};
 
-    // lets you change the color of the first X number of words
-    $("li:nth-child(-n + 30)").css("color", "blue");
+    // DEFINES NUMBER OF HIGHLIGHTED WORDS
+    $(".word:gt(30)").css("color", "black");
 
+    // REMOVES BORDER FOR LEFT ROW
+    $(".margin").first().css("border-left", "0");
 
+    // RETURNS CLICKED WORD
+    $(".word").click(function(){
+        var one = $(this).html()
+        var two = $(one).find("span").prevObject[1].data
+        var link = "http://onelook.com/thesaurus/?s=" + two
+        window.location.href = link;
+    });
 
-  // $(document).on('input', '.clear', function(){
-  //   $(this)[tog(this.value)]('x');
-  // }).on('mousemove', '.x', function( e ){
-  //   $(this)[tog(this.offsetWidth-18 < e.clientX-this.getBoundingClientRect().left)]('onX');
-  // }).on('touchstart click', '.onX', function( ev ){
-  //   ev.preventDefault();
-  //   $(this).removeClass('x onX').val('').change();
-  // });
-
-
-
-    </script>
+</script>
 </body>
 </html>
