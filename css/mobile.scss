@@ -1,0 +1,48 @@
+
+
+
+// iphone6
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
+ .word {
+    font-size: .8em;
+    flex: 2 150px !important;
+    span {
+      width: 20px !important;
+      margin: 5px 8px 0 0;
+    }
+  }
+  // .navbar {text-align:center;}
+  .list-cont {padding: 0px 0 30px 0 !important;}
+  #search-cont {
+   background: red;
+   position: relative;
+  }
+  #search-bar {
+   margin: 0 !important;
+   transform: scale(.7) !important;
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+}
+
+
+
+
+
+
+// iphone5
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+
+/*@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
+*/
+
+}

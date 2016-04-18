@@ -1,25 +1,28 @@
 body {
   margin: 0 auto; }
 
+@media (min-width: 50em) {
+  body {
+    width: 70%; } }
+@media (min-width: 75em) {
+  body {
+    width: 60%; } }
 @media (max-width: 50em) {
   body {
     width: 100%; }
 
-  .navbar {
-    text-align: center;
-    text-align: center; }
-    .navbar img {
-      margin: 25px 0 0 0 !important;
-      position: relative !important;
-      width: 200px !important; }
-    .navbar #search-bar {
-      font-size: 2em !important;
-      width: calc(100% - 100px) !important;
-      margin: 20px 0 0 40px !important; }
-    .navbar #filters {
-      margin: 20px 0 30px 0 !important; }
-      .navbar #filters input {
-        font-size: .8em !important; }
+  .navbar img {
+    margin: 25px 0 0 0 !important;
+    position: relative !important;
+    width: 200px !important; }
+  .navbar #search-bar {
+    font-size: 2em !important;
+    width: calc(100% - 100px) !important;
+    margin: 20px 0 0 40px !important; }
+  .navbar #filters {
+    margin: 20px 0 30px 0 !important; }
+    .navbar #filters input {
+      font-size: .8em !important; }
 
   .list-cont {
     font-size: 1.5em !important;
@@ -32,12 +35,6 @@ body {
     width: 100px;
     padding: 40px 0 0 0 !important;
     left: 0px !important; } }
-@media (min-width: 50em) {
-  body {
-    width: 70%; } }
-@media (min-width: 75em) {
-  body {
-    width: 60%; } }
 a {
   text-decoration: none;
   color: blue;
@@ -53,7 +50,6 @@ a {
 
 .navbar {
   min-height: 160px;
-  border-bottom: 1px solid #999;
   position: relative;
   overflow: auto; }
   .navbar img {
@@ -85,6 +81,14 @@ a {
     color: black;
     outline: none;
     background: #e0e0e0; }
+  .navbar .type-cont {
+    border: solid 1px green;
+    visibility: hidden;
+    width: 100%;
+    height: 215px;
+    display: block;
+    position: relative;
+    padding: 0 55px; }
 
 .ul-cont {
   margin: 0 auto;
@@ -92,30 +96,8 @@ a {
   .ul-cont .list-cont {
     padding: 20px 0 30px 0;
     display: flex;
-    min-width: 15em;
-    -webkit-flex: 1 1 15em;
-    /* this */
-    flex: 1;
     flex-flow: row wrap;
     justify-content: space-between; }
-  .ul-cont .divisions {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    overflow: hidden;
-    z-index: -2; }
-    .ul-cont .divisions .division-cont {
-      padding: 0;
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-between; }
-    .ul-cont .divisions .margin {
-      flex: 1 250px;
-      box-sizing: border-box;
-      border-left: solid 1px #999;
-      height: 20000px; }
   .ul-cont .word {
     cursor: pointer;
     position: relative;
@@ -141,7 +123,7 @@ a {
     line-height: 15px;
     position: absolute; }
   .ul-cont .word:hover .more-info {
-    animation: delay 1s;
+    animation: delay .5s;
     display: inline;
     padding: 20px 0 0 30px;
     box-sizing: border-box; }
@@ -155,8 +137,9 @@ a {
       border: 1px solid #999; }
 
 .footer {
+  border-top: solid 1px #999;
   text-align: center;
-  padding: 30px 0 15px 0;
+  padding: 16px 0 15px 0;
   font-size: .8em; }
 
 @keyframes delay {
@@ -166,16 +149,61 @@ a {
     opacity: 0; }
   100% {
     opacity: 1; } }
+nav {
+  margin-top: 160px;
+  position: relative;
+  z-index: 1;
+  white-space: nowrap; }
 
-.item {
-  border: solid 1px #fff;
-  background-color: #09e;
-  box-sizing: border-box;
-  color: #fff;
-  padding: 8px; }
+nav a {
+  border: solid 1px blue;
+  position: relative;
+  display: inline-block;
+  padding: 3.5em 1.5em 1em;
+  color: inherit;
+  text-decoration: none;
+  margin: 0 -7px; }
 
-[flex].item {
-  -webkit-flex: 1 1 318px;
-  flex: 1 1 318px; }
+nav a::before,
+main {
+  border: .1em solid #aaa; }
+
+nav a::before {
+  content: '';
+  /* To generate the box */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: .5em;
+  left: 0;
+  z-index: -1;
+  border-bottom: none;
+  border-radius: 5px 15px 0 0;
+  background: #fafafa;
+  transform: perspective(5px) rotateX(2deg);
+  transform-origin: bottom; }
+
+nav.left a {
+  padding: 1em 3em .7em 1em;
+  visibility: visible; }
+
+nav.left a::before {
+  transform-origin: bottom left; }
+
+nav a.selected {
+  z-index: 200; }
+
+nav a.selected::before {
+  margin-bottom: -1px;
+  border-top-width: 1px; }
+
+nav a.selected::before,
+main {
+  background: white; }
+
+main {
+  display: block;
+  padding: 1em;
+  border: solid 1px red; }
 
 /*# sourceMappingURL=general.css.map */
