@@ -1,7 +1,15 @@
 
-
 body {margin: 0 auto;}
+@media (min-width: 50em) {
+  body {width: 70%;}
+ // html {background: orange;}
+}
+@media (min-width: 75em) {
+  body {width: 60%;}
+  // html {background: red;}
+}
 @media (max-width: 50em) {
+  // html {background: yellow;}
   body { width: 100%; }
   .navbar {
     text-align:center;
@@ -57,7 +65,7 @@ a {
 }
 .navbar{
   min-height: 160px;
-  border-bottom: 1px solid #999;
+  // border-bottom: 1px solid #999;
   position: relative;
   overflow: auto;
   img {
@@ -97,7 +105,28 @@ a {
   }
 }
 
+#tabs {
+    width: 100%;
+    overflow: auto;
+    // border: green 1px solid;
+    display: block;
+    margin: 0px 40px;
+}
+.tab {
+  float: left;
+  // background: red;
+  border: #e0e0e0 1px solid;
+  padding: 8px;
+  margin-bottom: -5px;
+}
+
+.tab:after {
+  z-index: 100
+
+}
+
 .ul-cont {
+  border-top: 1px solid #999;
   margin: 0 auto;
   position: relative;
   .list-cont {
@@ -126,7 +155,8 @@ a {
     .margin {
       flex: 1 250px;
       box-sizing: border-box;
-      border-left: solid 1px #999;
+      // border-left: solid 1px #999;
+      border-left: solid 1px red;
       height: 20000px;
     }
   }
@@ -163,7 +193,7 @@ a {
   }
   .word:hover .more-info {
     // border: 1px solid red;
-    animation: delay 1s;
+    animation: delay .5s;
     display: inline;
     padding: 20px 0 0 30px;
     box-sizing: border-box;
@@ -191,27 +221,3 @@ a {
   50% {opacity: 0;}
   100% {opacity: 1;}
 }
-
-
-
-
-<<<<<<< HEAD
-
-
-
-
-.item {
-  border: solid 1px #fff;
-  background-color: #09e;
-  box-sizing: border-box;
-  color: #fff;
-  padding: 8px;
-}
-
-[flex].item {
-  -webkit-flex: 1 1 318px;
-  flex: 1 1 318px;
-}
-
-=======
->>>>>>> master
