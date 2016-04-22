@@ -1,0 +1,28 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 667px) and (orientation: portrait) {
+  .word {
+    font-size: .8em;
+    flex: 2 150px !important; }
+    .word span {
+      width: 20px !important;
+      margin: 5px 8px 0 0; }
+
+  .list-cont {
+    padding: 0px 0 30px 0 !important; }
+
+  #search-cont {
+    background: red;
+    position: relative; }
+
+  #search-bar {
+    margin: 0 !important;
+    transform: scale(0.7) !important;
+    -webkit-appearance: none;
+    border-radius: 0; } }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+  /*@media only screen
+  and (min-device-width : 375px)
+  and (max-device-width : 667px)
+  and (orientation : portrait) {
+  */ }
+
+/*# sourceMappingURL=mobile.css.map */
